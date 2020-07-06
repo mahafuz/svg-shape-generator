@@ -1,0 +1,46 @@
+.boxed-layout-wrap
+    line-height: 30px
+    position: relative
+    min-height: 30px
+    padding-left: 25px
+    margin-bottom: 0
+    font-weight: 400
+    cursor: pointer
+    display: inline-block
+    &::before
+        background: #f0f0f0
+        content: ''
+        position: absolute
+        width: 55px
+        height: 30px
+        border: 1px solid #e8eae9
+        left: -40px
+        top: 0
+        border-radius: 20px
+        -webkit-transition: all .4s ease
+        -o-transition: all .4s ease
+        transition: all .4s ease
+    &::after
+        content: ''
+        position: absolute
+        left: -38px
+        top: 2px
+        width: 26px
+        height: 26px
+        border-radius: 50%
+        background: #fbfbfb
+        -webkit-transition: left .3s cubic-bezier(.175,.885,.32,1.275),padding .3s ease,margin .3s ease
+        -o-transition: left .3s cubic-bezier(.175,.885,.32,1.275),padding .3s ease,margin .3s ease
+        transition: left .3s cubic-bezier(.175,.885,.32,1.275),padding .3s ease,margin .3s ease
+        -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 0 rgba(0,0,0,.08)
+        box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 0 rgba(0,0,0,.08)
+    input
+        line-height: 37px
+        margin: 0 5px 0 0
+        display: none
+
+.boxed-layout-wrap.checked:after
+    left: -13px
+
+.boxed-layout-wrap.checked:before
+    background: #2df16e

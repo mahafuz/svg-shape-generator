@@ -1,12 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Slider } from '@reach/slider';
+import "@reach/slider/styles.css";
+
 
 import Logo from "./components/Logo";
 import Sidebar from "./components/Sidebar";
 import Layout from "./components/Layout";
 import Header from "./components/Header";
 
+import Select from './utils/controls/select';
+import Radio from './utils/controls/radio';
+
 import "./styles/main.sass";
+
+const shapes = [ 'shape 1', 'shape 2', 'shape 3'];
 
 const App: React.FC = () => {
   return (
@@ -20,6 +28,12 @@ const App: React.FC = () => {
                 alt="Svg Shape Generator"
               />
               <h1>Custom Shape Dividers</h1>
+
+              <Select name="shapes" title="shapes" desc="lorem ipsum dolor sit amet" options={shapes} />
+              <Slider min={0} max={200} step={10} />
+
+              <Radio />
+
             </Sidebar>
             <Layout>
               <Header
