@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Slider } from '@reach/slider';
 import "@reach/slider/styles.css";
+import { ChromePicker } from 'react-color';
 
 
 import Logo from "./components/Logo";
@@ -31,6 +32,10 @@ const App: React.FC = () => {
 
               <Select name="shapes" title="shapes" desc="lorem ipsum dolor sit amet" options={shapes} />
               <Slider min={0} max={200} step={10} />
+
+              <div className="colors">
+                {/* <ChromePicker /> */}
+              </div>
 
               <Radio />
 

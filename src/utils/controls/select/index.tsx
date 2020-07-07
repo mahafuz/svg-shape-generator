@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import InputProperties from "../../InputProperties";
+import DropdownIcon from './DropDownIcon';
 import "./select.sass";
 
 interface Props extends InputProperties {
@@ -49,7 +50,8 @@ const Select: React.FC<Props> = (props) => {
           value={selected ? selected : first}
           onClick={handleToggle}
         />
-        {isOpen && <ul>
+        <DropdownIcon />
+        {isOpen && <ul className="dropdown">
           {options.map((option) => (
             <li onClick={() => handleOption(option)}>{option}</li>
           ))}

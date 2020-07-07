@@ -1,0 +1,49 @@
+@import '../../../styles/colors'
+
+.pretty-select
+    position: relative
+    display: inline-block
+    input
+        padding: 15px 18px
+        border-radius: 5px
+        border: 1px solid #dfe6f1
+        color: #224272
+        border-radius: 4px
+        font-size: 14px
+        background: #ffffff
+        transition: all 0.1s
+        &:focus
+            border: 1px solid #dfe6f1
+            color: $main_color
+            outline: none
+    .dropdown
+        position: absolute
+        left: 0
+        top: 105%
+        margin: 0
+        padding: 0
+        list-style: none
+        background: #ffffff
+        z-index: 2
+        width: 100%
+        text-align: left
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2)
+        display: flex
+        flex-direction: column
+        height: -moz-fit-content
+        height: fit-content
+        li
+            padding: 12px 16px
+            border-bottom: 1px solid #f3f7fb
+            border: none
+            background: white
+            display: inline-flex
+            align-items: center
+            cursor: pointer
+            color: #6c7185
+    .dropdown-icon
+        position: absolute
+        right: 20px
+        top: 48%
+
+    
